@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main() {
+    int book_id;
+    int due_date;
+    int return_date;
+    int over_due_date;
+    int fine_rate;
+    int fine_amount;
+
+    // prompt the user to enter book id
+    printf("Enter the book ID: ");
+    scanf("%d", &book_id);
+
+    // prompt the user to enter the due date
+    printf("Enter the due date: ");
+    scanf("%d", &due_date);
+
+    // prompt the user to enter the return date
+    printf("Enter the return date: ");
+    scanf("%d", &return_date);
+
+    // calculate the overdue days
+    over_due_date = return_date - due_date;
+
+    if (over_due_date >= 7) {
+        fine_rate = 20;
+        fine_amount = fine_rate * over_due_date;
+        printf("The fine amount is: %d\n", fine_amount);
+    } else if (over_due_date <= 15) {
+        fine_rate = 50;
+        fine_amount = fine_rate * over_due_date;
+        printf("The fine amount is: %d\n", fine_amount);
+    } else {
+        fine_rate = 100;
+        fine_amount = fine_rate * over_due_date;
+        printf("The fine amount is: %d\n", fine_amount);
+    }
+
+    printf("\nThe book ID is: %d\n", book_id);
+    printf("The due date is: %d\n", due_date);
+    printf("The return date is: %d\n", return_date);
+    printf("The overdue days are: %d\n", over_due_date);
+    printf("The fine rate is: %d\n", fine_rate);
+
+    return 0;
+}
