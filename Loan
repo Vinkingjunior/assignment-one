@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int age;
+    float salary;
+
+    // prompt the user to enter age
+    printf("Enter the age: ");
+    scanf("%d", &age);
+
+    // prompt the user to enter the amount of salary
+    printf("Enter the amount of salary: ");
+    scanf("%f", &salary);
+
+    if (age >= 21 && salary >= 21000) {
+        printf("Congratulations, you qualify for the loan.\n");
+    } else {
+        printf("Unfortunately, we are unable to offer you the loan.\n");
+    }
+
+    return 0;
+}
